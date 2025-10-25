@@ -13,7 +13,7 @@ builder.Services.AddOpenApi();
 
 IConfiguration configuration = builder.Configuration;
 string connectionString = configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplitacionContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

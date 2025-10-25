@@ -1,4 +1,6 @@
-﻿namespace TaskManager.Api.Models
+﻿using TaskManager.Common.Models;
+
+namespace TaskManager.Api.Models
 {
     public class User
     {
@@ -19,6 +21,18 @@
         {
             
         }
+        public User(UserModel userModel)
+        {
+            Id = userModel.Id;
+            FirstName = userModel.FirstName;
+            LastName = userModel.LastName;
+            Email = userModel.Email;
+            Password = userModel.Password;
+            Status = userModel.Status;
+            Phone = userModel.Phone;
+            Photo = userModel.Photo;
+            RegistrationDate = userModel.RegistrationDate;
+        }
         public User(string fname, string lname, string email, string password, 
             UserStatus status = UserStatus.User, string phone = null, byte[] photo = null)
         {
@@ -30,6 +44,21 @@
             Phone = phone;
             Photo = photo;
             RegistrationDate = DateTime.Now;
+        }
+        public UserModel ToDto()
+        {
+            return new UserModel
+            {
+                Id = this.Id,
+                FirstName = this.FirstName,
+                LastName = this.LastName,
+                Email = this.Email,
+                Password = this.Password,
+                Status = this.Status,
+                Phone = this.Phone,
+                Photo = this.Photo,
+                RegistrationDate = this.RegistrationDate
+            };
         }
     }
 }

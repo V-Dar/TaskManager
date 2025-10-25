@@ -11,7 +11,7 @@ using TaskManager.Api.Models.Data;
 
 namespace TaskManager.Api.Migrations
 {
-    [DbContext(typeof(ApplitacionContext))]
+    [DbContext(typeof(ApplicationContext))]
     [Migration("20251018140815_AddProjectAdmin")]
     partial class AddProjectAdmin
     {

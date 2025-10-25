@@ -6,11 +6,13 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
+      "launchUrl": "api/users/test",
       "applicationUrl": "http://localhost:5152"
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "api/users/test",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

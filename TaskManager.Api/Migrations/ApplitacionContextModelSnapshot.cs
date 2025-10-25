@@ -10,7 +10,7 @@ using TaskManager.Api.Models.Data;
 
 namespace TaskManager.Api.Migrations
 {
-    [DbContext(typeof(ApplitacionContext))]
+    [DbContext(typeof(ApplicationContext))]
     partial class ApplitacionContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
